@@ -6,10 +6,18 @@
 <title>Magnificat Ministry — Growing in Faith & Friendship</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+/* Proxima Nova & Amadine - fallbacks until web font files are hosted */
+@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova'), local('ProximaNova-Regular'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova Bold'), local('ProximaNova-Bold'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova Light'), local('ProximaNova-Light'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Amadine'; src: local('Amadine'), local('Amadine-Regular'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Amadine'; src: local('Amadine Bold'), local('Amadine-Bold'); font-weight: 700; font-style: normal; }
+</style>
+<style>
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; color: #3D2E1F; line-height: 1.7; background: #FDF8F3; }
+body { font-family: 'Proxima Nova', 'Inter', -apple-system, sans-serif; color: #3D2E1F; line-height: 1.7; background: #FDF8F3; }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 
@@ -17,19 +25,27 @@ a { text-decoration: none; color: inherit; }
 :root {
   --cream: #FDF8F3;
   --cream-dark: #F5EDE3;
-  --gold: #C5A55A;
+  --gold: #C9AA49;
   --gold-light: #D4BC7C;
   --gold-dark: #A68B3E;
-  --burgundy: #7A2E3B;
-  --burgundy-light: #9E4A5A;
-  --burgundy-dark: #5C1E2C;
-  --olive: #5C6B4F;
-  --olive-light: #7A8C6A;
+  --rose: #D39E88;
+  --rose-dark: #B8846E;
+  --rose-light: #E0B8A6;
+  --green: #7C8A5B;
+  --green-light: #95A274;
+  --green-dark: #5E6B44;
+  --sage: #A3B3A7;
   --warm-brown: #3D2E1F;
   --warm-gray: #8A7B6B;
   --white: #FFFFFF;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Inter', -apple-system, sans-serif;
+  --serif: 'Amadine', 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Proxima Nova', 'Inter', -apple-system, sans-serif;
+  /* Legacy aliases for compatibility */
+  --burgundy: var(--rose);
+  --burgundy-light: var(--rose-light);
+  --burgundy-dark: var(--rose-dark);
+  --olive: var(--green);
+  --olive-light: var(--green-light);
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -52,10 +68,14 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   padding: 14px 24px;
 }
 .nav-logo {
-  font-family: var(--serif); font-size: 1.4rem; font-weight: 600;
-  color: var(--burgundy); letter-spacing: 0.5px;
+  display: flex; align-items: center; gap: 10px;
 }
-.nav-logo span { color: var(--gold); }
+.nav-logo img { height: 44px; width: auto; }
+.nav-logo-text {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 600;
+  color: var(--green-dark); letter-spacing: 0.5px;
+}
+.nav-logo-text span { color: var(--gold); }
 .nav-links { display: none; }
 .nav-links.open {
   display: flex; flex-direction: column; position: absolute;
@@ -83,13 +103,13 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 .hero {
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
   text-align: center; padding: 120px 24px 80px;
-  background: linear-gradient(to bottom, rgba(253,248,243,0.85), rgba(253,248,243,0.7)),
+  background: linear-gradient(to bottom, rgba(253,248,243,0.45), rgba(253,248,243,0.35)),
     url('https://www.jthlighting.com/sites/default/files/2018-07/SANCTUARY%20PANO%20FROM%20BALC.JPG') center center / cover no-repeat;
   position: relative; overflow: hidden;
 }
 .hero::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(253,248,243,0.6) 0%, rgba(253,248,243,0.85) 60%, rgba(253,248,243,0.95) 100%);
+  background: linear-gradient(to bottom, rgba(253,248,243,0.2) 0%, rgba(253,248,243,0.5) 60%, rgba(253,248,243,0.85) 100%);
   pointer-events: none;
 }
 .hero-content { max-width: 700px; position: relative; z-index: 1; }
@@ -97,7 +117,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   font-size: 2.5rem; color: var(--gold); margin-bottom: 24px;
   font-family: var(--serif); opacity: 0.7;
 }
-.hero h1 { color: var(--burgundy); margin-bottom: 16px; font-weight: 600; }
+.hero h1 { color: var(--warm-brown); margin-bottom: 16px; font-weight: 600; text-shadow: 0 1px 8px rgba(253,248,243,0.8); }
 .hero-tagline {
   font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   color: var(--warm-gray); font-style: italic; margin-bottom: 32px;
@@ -364,7 +384,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 <!-- NAVIGATION -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">Magnificat <span>Ministry</span></a>
+    <a href="#" class="nav-logo"><img src="logo.png" alt="Magnificat Ministry Logo"><span class="nav-logo-text">Magnificat <span>Ministry</span></span></a>
     <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#pillars">Pillars</a>
@@ -384,7 +404,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="hero-cross">&#10013;</div>
+    <img src="logo.png" alt="Magnificat Ministry Logo" style="width: 180px; height: auto; margin: 0 auto 24px; filter: drop-shadow(0 2px 8px rgba(253,248,243,0.6));">
     <h1>Magnificat Ministry</h1>
     <p class="hero-tagline">Growing in Faith & Friendship</p>
     <div class="hero-pillars">
@@ -421,7 +441,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 </section>
 
 <!-- QUOTE BANNER -->
-<div class="quote-banner" style="background: linear-gradient(rgba(122,46,59,0.88), rgba(92,30,44,0.92)), url('https://www.jthlighting.com/sites/default/files/2018-07/SANCTUARY%20PANO%20FROM%20BALC.JPG') center center / cover no-repeat;">
+<div class="quote-banner" style="background: linear-gradient(rgba(124,138,91,0.88), rgba(61,46,31,0.92)), url('https://www.jthlighting.com/sites/default/files/2018-07/SANCTUARY%20PANO%20FROM%20BALC.JPG') center center / cover no-repeat;">
   <blockquote>"Rarely, if ever, are we healed in isolation. Healing is an act of communion."</blockquote>
   <cite>— bell hooks</cite>
 </div>
@@ -695,6 +715,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 
 <!-- FOOTER -->
 <footer class="footer">
+  <img src="logo.png" alt="Magnificat Ministry" style="width: 120px; height: auto; margin: 0 auto 12px; filter: brightness(1.2);">
   <div class="footer-logo">Magnificat Ministry</div>
   <p class="footer-tagline">Growing in Faith & Friendship</p>
   <p class="footer-verse">"My soul magnifies the Lord, and my spirit rejoices in God my Savior." — Luke 1:46-47</p>
