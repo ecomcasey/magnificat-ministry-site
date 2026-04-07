@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcasts | Magnificat Ministry</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova'), local('ProximaNova-Regular'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova Bold'), local('ProximaNova-Bold'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova Light'), local('ProximaNova-Light'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Amadine'; src: local('Amadine'), local('Amadine-Regular'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Amadine'; src: local('Amadine Bold'), local('Amadine-Bold'); font-weight: 700; font-style: normal; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Proxima Nova', 'Inter', -apple-system, sans-serif; color: #3D2E1F; line-height: 1.7; background: #FDF8F3; }
+a { text-decoration: none; color: inherit; }
+
+:root {
+  --cream: #FDF8F3;
+  --cream-dark: #F5EDE3;
+  --gold: #C9AA49;
+  --gold-light: #D4BC7C;
+  --gold-dark: #A68B3E;
+  --rose: #D39E88;
+  --rose-dark: #B8846E;
+  --green: #7C8A5B;
+  --green-dark: #5E6B44;
+  --warm-brown: #3D2E1F;
+  --warm-gray: #8A7B6B;
+  --white: #FFFFFF;
+  --serif: 'Amadine', 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Proxima Nova', 'Inter', -apple-system, sans-serif;
+}
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.2; color: var(--warm-brown); }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); }
+p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A; }
+
+.nav {
+  background: rgba(253, 248, 243, 0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(197, 165, 90, 0.2);
+  padding: 14px 24px;
+}
+.nav-inner {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo img { height: 44px; width: auto; }
+.nav-logo-text {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 600;
+  color: var(--green-dark); letter-spacing: 0.5px;
+}
+.nav-logo-text span { color: var(--gold); }
+.back-link {
+  margin-left: auto; font-family: var(--sans); font-size: 0.9rem;
+  font-weight: 500; color: var(--warm-brown); text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.back-link:hover { color: var(--rose); }
+
+.page-header {
+  padding: 60px 24px 40px; text-align: center;
+}
+.page-header h1 { margin-bottom: 12px; }
+.page-header p { max-width: 600px; margin: 0 auto; color: var(--warm-gray); font-family: var(--serif); font-style: italic; font-size: 1.1rem; }
+
+.podcast-list {
+  max-width: 800px; margin: 0 auto; padding: 0 24px 80px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.podcast-card {
+  background: var(--white); border-radius: 8px; padding: 28px;
+  border-left: 4px solid var(--gold);
+  border-top: 1px solid rgba(197,165,90,0.15);
+  border-right: 1px solid rgba(197,165,90,0.15);
+  border-bottom: 1px solid rgba(197,165,90,0.15);
+}
+.podcast-card h3 { color: var(--warm-brown); margin-bottom: 6px; }
+.podcast-hosts {
+  font-size: 0.85rem; color: var(--gold-dark); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+}
+.podcast-card p { font-size: 0.95rem; margin-bottom: 16px; }
+.podcast-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.podcast-link {
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 600;
+  color: var(--gold-dark); text-transform: uppercase; letter-spacing: 1px;
+}
+.podcast-link:hover { color: var(--rose); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Magnificat Ministry Logo"><span class="nav-logo-text">Magnificat <span>Ministry</span></span></a>
+    <a href="index.html#resources" class="back-link">&larr; Back</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Podcasts</h1>
+  <p>Some of our favorite podcasts for women growing in faith.</p>
+</div>
+
+<div class="podcast-list">
+  <div class="podcast-card">
+    <h3>Abiding Together</h3>
+    <p class="podcast-hosts">Heather Khym, Michelle Benzinger, Sr. Miriam James Heidland</p>
+    <p>Providing a place of connection, rest and encouragement for women who are on the journey of living out their passion and purpose in Jesus Christ.</p>
+    <div class="podcast-links">
+      <a href="https://podcasts.apple.com/us/podcast/abiding-together/id1206416686" class="podcast-link" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/4xAjvHSqEPEXTcpTnIIctD" class="podcast-link" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/c/AbidingTogetherPodcast" class="podcast-link" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+  <div class="podcast-card">
+    <h3>Restore the Glory</h3>
+    <p class="podcast-hosts">Jake Khym & Bob Schuchts</p>
+    <p>A practical discussion where two former therapists share what they learned professionally and experienced personally about the healing and restoration of our God-given glory.</p>
+    <div class="podcast-links">
+      <a href="https://podcasts.apple.com/us/podcast/restore-the-glory-podcast/id1505423615" class="podcast-link" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/5TdxRyKYE5vbSVitsAYdVG" class="podcast-link" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/channel/UCuNpvWqqxk4HCYxCqjRo9Rg" class="podcast-link" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
