@@ -57,10 +57,10 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 .nav-logo img { height: 44px; width: auto; }
 .nav-logo-text {
   font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
-  color: var(--green-dark); letter-spacing: 1px;
+  color: var(--warm-brown); letter-spacing: 1px;
   text-transform: uppercase;
 }
-.nav-logo-text span { color: var(--gold); }
+.nav-logo-text span { color: var(--warm-brown); }
 .nav-links { display: none; }
 .nav-links.open {
   display: flex; flex-direction: column; position: absolute;
@@ -87,27 +87,30 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 /* ===== HERO ===== */
 .hero {
   display: flex; align-items: center; justify-content: center;
-  padding: 100px 24px 60px;
-  background: var(--cream-dark);
+  padding: 120px 24px;
+  background: #E7CCBE;
 }
 .hero-inner {
   max-width: 1200px; margin: 0 auto; width: 100%;
-  display: flex; align-items: center; gap: 48px;
+  display: flex; align-items: stretch; gap: 48px;
 }
 .hero-left {
   flex: 1; min-width: 0;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
 .hero-left img.hero-logo {
-  width: 200px; height: auto; margin-bottom: 24px;
+  width: 200px; height: auto;
 }
-.hero-left img.hero-tagline-img {
-  max-width: 400px; width: 100%; height: auto; margin-bottom: 36px;
+.hero-tagline {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--warm-brown); line-height: 1.3;
 }
 .hero-right {
   flex: 1; min-width: 0;
 }
 .hero-right img {
-  width: 100%; height: auto; border-radius: 8px;
+  width: 100%; height: 100%; border-radius: 8px;
   object-fit: cover;
 }
 .btn {
@@ -122,10 +125,10 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 }
 .btn-primary:hover { background: var(--burgundy-dark); border-color: var(--burgundy-dark); transform: translateY(-1px); }
 .btn-outline {
-  background: transparent; color: var(--burgundy);
-  border: 2px solid var(--burgundy);
+  background: var(--white); color: var(--warm-brown);
+  border: 2px solid var(--warm-brown);
 }
-.btn-outline:hover { background: var(--burgundy); color: var(--white); }
+.btn-outline:hover { background: var(--warm-brown); color: var(--white); }
 
 /* ===== SECTIONS ===== */
 .section { padding: 80px 24px; }
@@ -170,11 +173,15 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   display: flex; flex-direction: column;
 }
 .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,46,31,0.08); }
-.pillar-card h3 { color: var(--burgundy); margin-bottom: 10px; font-weight: 600; }
+.pillar-card h3 { margin-bottom: 10px; font-weight: 600; }
 .pillar-card p { font-size: 0.95rem; flex-grow: 1; }
+.pillar-card.fellowship h3 { color: var(--sage); }
+.pillar-card.service h3 { color: var(--gold-dark); }
+.pillar-card.formation h3 { color: var(--rose); }
+.pillar-card.worship h3 { color: var(--green); }
 .pillar-icon {
   width: 80px; height: 80px; margin-top: 20px;
-  object-fit: contain;
+  object-fit: contain; align-self: flex-end;
 }
 
 /* ===== QUOTE BANNER ===== */
@@ -227,7 +234,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   display: flex; gap: 20px; background: var(--white);
   border-radius: 8px; padding: 24px;
   border: 1px solid rgba(197,165,90,0.15);
-  align-items: flex-start;
+  align-items: center;
 }
 .event-date-box {
   min-width: 70px; text-align: center;
@@ -245,11 +252,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 /* Pillar-colored date boxes */
 .event-date-box.worship { background: var(--green); }
 .event-date-box.fellowship { background: var(--sage); }
-.event-date-box.fellowship .month { color: var(--warm-brown); }
-.event-date-box.fellowship .day { color: var(--warm-brown); }
 .event-date-box.service { background: var(--gold); }
-.event-date-box.service .month { color: var(--warm-brown); }
-.event-date-box.service .day { color: var(--warm-brown); }
 .event-date-box.formation { background: var(--burgundy); }
 .event-info h3 { font-size: 1.2rem; margin-bottom: 4px; }
 .event-info p { font-size: 0.9rem; margin-bottom: 2px; }
@@ -305,7 +308,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 
 /* ===== CONTACT ===== */
 .contact-section {
-  background: var(--rose-light);
+  background: var(--cream-dark);
   padding: 80px 24px;
 }
 .contact-section .section-inner { max-width: 1000px; margin: 0 auto; }
@@ -332,23 +335,23 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   text-align: center;
 }
 .footer img.footer-logo-img {
-  width: 120px; height: auto; margin: 0 auto 12px;
+  width: 120px; height: auto; margin: 0 auto 24px;
 }
 .footer img.footer-tagline-img {
   max-width: 300px; width: 100%; height: auto; margin: 0 auto 24px;
 }
 .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
 .footer-links a {
-  font-size: 0.8rem; color: var(--warm-brown); text-transform: uppercase;
+  font-size: 0.8rem; color: var(--white); text-transform: uppercase;
   letter-spacing: 1px; font-weight: 500;
 }
-.footer-links a:hover { color: var(--green-dark); }
+.footer-links a:hover { color: var(--cream-dark); }
 .footer-verse {
   font-family: var(--serif); font-style: italic; font-size: 0.95rem;
-  color: var(--green-dark); margin-bottom: 20px; max-width: 500px;
+  color: var(--white); margin-bottom: 20px; max-width: 500px;
   margin-left: auto; margin-right: auto;
 }
-.footer-copy { font-size: 0.75rem; color: var(--green-dark); }
+.footer-copy { font-size: 0.75rem; color: var(--white); opacity: 0.8; }
 
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
@@ -370,8 +373,9 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 }
 @media (max-width: 767px) {
   .hero-inner { flex-direction: column; text-align: center; }
-  .hero-left img.hero-logo { margin: 0 auto 24px; }
-  .hero-left img.hero-tagline-img { margin: 0 auto 36px; }
+  .hero-left { align-items: center; gap: 24px; }
+  .hero-left img.hero-logo { margin: 0 auto; }
+  .hero-tagline { margin: 0 auto; }
 }
 @media (min-width: 1024px) {
   .pillars-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }

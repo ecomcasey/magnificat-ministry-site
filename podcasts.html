@@ -6,61 +6,9 @@
 <title>Podcasts | Magnificat Ministry</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/nnd1tnm.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 <style>
-@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova'), local('ProximaNova-Regular'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova Bold'), local('ProximaNova-Bold'); font-weight: 600; font-style: normal; }
-@font-face { font-family: 'Proxima Nova'; src: local('Proxima Nova Light'), local('ProximaNova-Light'); font-weight: 300; font-style: normal; }
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Proxima Nova', 'Inter', -apple-system, sans-serif; color: #3D2E1F; line-height: 1.7; background: #FDF8F3; }
-a { text-decoration: none; color: inherit; }
-
-:root {
-  --cream: #FDF8F3;
-  --cream-dark: #F5EDE3;
-  --gold: #C9AA49;
-  --gold-light: #D4BC7C;
-  --gold-dark: #A68B3E;
-  --rose: #D39E88;
-  --rose-dark: #B8846E;
-  --green: #7C8A5B;
-  --green-dark: #5E6B44;
-  --warm-brown: #3D2E1F;
-  --warm-gray: #8A7B6B;
-  --white: #FFFFFF;
-  --serif: 'amandine', 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Proxima Nova', 'Inter', -apple-system, sans-serif;
-}
-
-h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.2; color: var(--warm-brown); }
-h1 { font-size: clamp(2rem, 5vw, 3rem); }
-h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); }
-p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A; }
-
-.nav {
-  background: rgba(253, 248, 243, 0.95); backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(197, 165, 90, 0.2);
-  padding: 14px 24px;
-}
-.nav-inner {
-  max-width: 1000px; margin: 0 auto;
-  display: flex; align-items: center; gap: 10px;
-}
-.nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo img { height: 44px; width: auto; }
-.nav-logo-text {
-  font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
-  color: var(--green-dark); letter-spacing: 1px; text-transform: uppercase;
-}
-.nav-logo-text span { color: var(--gold); }
-.back-link {
-  margin-left: auto; font-family: var(--sans); font-size: 0.9rem;
-  font-weight: 500; color: var(--warm-brown); text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.back-link:hover { color: var(--rose); }
-
+/* Page-specific styles */
 .page-header {
   padding: 60px 24px 40px; text-align: center;
 }
@@ -96,8 +44,8 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Magnificat Ministry Logo"><span class="nav-logo-text">Magnificat <span>Ministry</span></span></a>
-    <a href="index.html#resources" class="back-link">&larr; Back</a>
+    <a href="index.html" class="nav-logo"><span class="nav-logo-text">Magnificat <span>Ministry</span></span></a>
+    <a href="index.html#resources" class="back-link" style="margin-left: auto; font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--warm-brown); text-transform: uppercase; letter-spacing: 0.5px;">&larr; Back</a>
   </div>
 </nav>
 
@@ -128,6 +76,20 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
     </div>
   </div>
 </div>
+
+<footer class="footer">
+  <img src="assets/images/magnificat-logo-white-bkgd.png" alt="Magnificat Ministry" class="footer-logo-img">
+  <img src="assets/images/growing-in-faith-one-line.png" alt="Growing in Faith & Friendship" class="footer-tagline-img">
+  <p class="footer-verse">"My soul magnifies the Lord, and my spirit rejoices in God my Savior." - Luke 1:46-47</p>
+  <div class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#pillars">Pillars</a>
+    <a href="index.html#events">Events</a>
+    <a href="index.html#resources">Resources</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Magnificat Ministry &middot; Cedar Rapids, Iowa &middot; A Catholic Women's Ministry</p>
+</footer>
 
 </body>
 </html>
