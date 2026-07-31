@@ -144,6 +144,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   font-family: var(--serif); font-size: 1.15rem; color: var(--warm-gray);
   font-style: italic; margin-bottom: 40px; max-width: 600px;
 }
+.section-subtitle.keep-line { max-width: none; }
 .bg-warm { background: var(--cream-dark); }
 .bg-dark { background: var(--warm-brown); }
 .bg-dark h2, .bg-dark h3, .bg-dark p, .bg-dark .section-label { color: var(--cream); }
@@ -371,6 +372,7 @@ p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #5A4A3A
   .contact-grid { grid-template-columns: 1fr 1fr; }
   .section { padding: 100px 40px; }
   .contact-section { padding: 100px 40px; }
+  .section-subtitle.keep-line { white-space: nowrap; }
 }
 @media (max-width: 767px) {
   .hero-inner { flex-direction: column; text-align: center; }
